@@ -221,8 +221,7 @@ const GoogleSheetInput = function () {
 
       plotLogo(content)
 
-      var bannerText = '<div><h1>Build your own radar</h1><p>Once you\'ve <a href ="https://www.thoughtworks.com/radar/byor">created your Radar</a>, you can use this service' +
-        ' to generate an <br />interactive version of your Technology Radar. Not sure how? <a href ="https://www.thoughtworks.com/radar/how-to-byor">Read this first.</a></p></div>'
+      var bannerText = '<div><h1>Customer Authentication Tribe Tech Radar</h1><p>This is a point in time view of CAT technology assets and roadmap. This page will be updated regularly</p></div>'
 
       plotBanner(content, bannerText)
 
@@ -236,7 +235,7 @@ const GoogleSheetInput = function () {
 }
 
 function setDocumentTitle () {
-  document.title = 'Build your own Radar'
+  document.title = 'Customer Authentication Tribe Tech Radar'
 }
 
 function plotLoading (content) {
@@ -250,7 +249,7 @@ function plotLoading (content) {
 
   plotLogo(content)
 
-  var bannerText = '<h1>Building your radar...</h1><p>Your Technology Radar will be available in just a few seconds</p>'
+  var bannerText = '<h1>Building tech radar...</h1><p>Technology Radar will be available in just a few seconds</p>'
   plotBanner(content, bannerText)
   plotFooter(content)
 }
@@ -284,7 +283,7 @@ function plotForm (content) {
   content.append('div')
     .attr('class', 'input-sheet__form')
     .append('p')
-    .html('<strong>Enter the URL of your <a href="https://www.thoughtworks.com/radar/how-to-byor" target="_blank">Google Sheet or CSV</a> file below…</strong>')
+    .html('<strong>Enter the URL of your Google Sheet or CSV data file below…</strong>')
 
   var form = content.select('.input-sheet__form').append('form')
     .attr('method', 'get')
@@ -299,7 +298,7 @@ function plotForm (content) {
     .attr('type', 'submit')
     .append('a')
     .attr('class', 'button')
-    .text('Build my radar')
+    .text('Build tech radar')
 
   form.append('p').html("<a href='https://www.thoughtworks.com/radar/how-to-byor'>Need help?</a>")
 }
